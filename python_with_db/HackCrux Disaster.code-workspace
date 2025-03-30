@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "HackCrux Disaster",
+			"path": "../../HackCrux Disaster"
+		},
+		{
+			"name": "python_with_db",
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.port": 5506
+	}
+}

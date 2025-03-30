@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disaster News Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="welcome-screen" id="welcomeScreen">
+        <div class="welcome-content">
+            <h1><i class="fas fa-exclamation-triangle"></i> Disaster News Dashboard</h1>
+            <p>Stay informed about global disasters and emergencies</p>
+            <button id="getStartedBtn" class="get-started-btn">Get Started</button>
+        </div>
+    </div>
+
+    <div class="container" id="mainContent" style="display: none;">
+        <header>
+            <h1><i class="fas fa-exclamation-triangle"></i> Disaster News Dashboard</h1>
+            <button id="backToWelcome" class="back-btn"><i class="fas fa-arrow-left"></i> Back</button>
+        </header>
+
+        <div class="filters">
+            <div class="filter-group">
+                <label for="sourceFilter">News Source</label>
+                <select id="sourceFilter" onchange="filterNews()">
+                    <option value="">All Sources</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="trustScoreFilter">Trust Level</label>
+                <select id="trustScoreFilter" onchange="filterNews()">
+                    <option value="">All Trust Scores</option>
+                    <option value="high">High Trust (>80%)</option>
+                    <option value="medium">Medium Trust (50-80%)</option>
+                    <option value="low">Low Trust (<50%)</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="sortBy">Sort By</label>
+                <select id="sortBy" onchange="sortNews()">
+                    <option value="newest">Newest First</option>
+                    <option value="oldest">Oldest First</option>
+                    <option value="trust">Highest Trust</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="news-grid" id="newsGrid">
+            <!-- News cards will be dynamically inserted here -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
