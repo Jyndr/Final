@@ -1,0 +1,314 @@
+/* Base Styles */
+:root {
+    --primary-dark: #1a1a1a;
+    --secondary-dark: #2d2d2d;
+    --accent-color: #9370DB;
+    --text-light: #ffffff;
+    --text-muted: #cccccc;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: var(--primary-dark);
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* Guide Container */
+.guide-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.95) 0%, rgba(45, 45, 45, 0.95) 100%);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Guide Header */
+.guide-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.guide-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, var(--accent-color), #4A90E2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.guide-header .subtitle {
+    color: var(--accent-color);
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Guide Sections */
+.guide-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.guide-section {
+    background: linear-gradient(145deg, var(--primary-dark) 0%, var(--secondary-dark) 100%);
+    border-radius: 15px;
+    padding: 1.5rem;
+    border: 1px solid rgba(147, 112, 219, 0.3);
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.guide-section.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.guide-section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(147, 112, 219, 0.2);
+    border-color: rgba(147, 112, 219, 0.5);
+}
+
+/* Section Header */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(147, 112, 219, 0.3);
+    cursor: pointer;
+}
+
+.section-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.section-header h3 i {
+    color: var(--accent-color);
+}
+
+.toggle-btn {
+    background: rgba(147, 112, 219, 0.2);
+    border: none;
+    color: var(--accent-color);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.toggle-btn:hover {
+    background: rgba(147, 112, 219, 0.3);
+    transform: scale(1.1);
+}
+
+.toggle-btn i {
+    transition: transform 0.3s ease;
+}
+
+/* Section Content */
+.section-content {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-out;
+}
+
+.section-content.active {
+    max-height: 1000px;
+    opacity: 1;
+    margin-top: 1.5rem;
+}
+
+/* Steps */
+.step {
+    background: rgba(147, 112, 219, 0.1);
+    border-radius: 10px;
+    padding: 1.2rem;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(147, 112, 219, 0.2);
+    transition: all 0.3s ease;
+}
+
+.step:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(147, 112, 219, 0.2);
+    border-color: rgba(147, 112, 219, 0.4);
+    background: rgba(147, 112, 219, 0.15);
+}
+
+.step-number {
+    background: var(--accent-color);
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-bottom: 0.8rem;
+}
+
+.step h4 {
+    color: var(--text-light);
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+.step p {
+    color: var(--text-muted);
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Safety Guide */
+.safety-guide {
+    background: rgba(147, 112, 219, 0.1);
+    border-radius: 10px;
+    padding: 1.2rem;
+    margin-top: 1.5rem;
+    border: 1px solid rgba(147, 112, 219, 0.2);
+}
+
+.safety-guide h3 {
+    color: var(--text-light);
+    margin: 0 0 1rem 0;
+    font-size: 1.1rem;
+}
+
+.safety-guide ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.safety-guide li {
+    color: var(--text-muted);
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(147, 112, 219, 0.2);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.safety-guide li:before {
+    content: "•";
+    color: var(--accent-color);
+    margin-right: 0.8rem;
+}
+
+.safety-guide li:last-child {
+    border-bottom: none;
+}
+
+.safety-guide li:hover {
+    color: var(--text-light);
+    padding-left: 0.5rem;
+}
+
+/* Guide Footer */
+.guide-footer {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.download-btn, .tts-btn {
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    border: none;
+    color: var(--text-light);
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    transition: all 0.3s ease;
+    background: rgba(147, 112, 219, 0.3);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.download-btn:hover, .tts-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(147, 112, 219, 0.4);
+    background: rgba(147, 112, 219, 0.4);
+}
+
+.download-btn i, .tts-btn i {
+    font-size: 1.1rem;
+    color: var(--accent-color);
+}
+
+/* Section-specific colors */
+#home-security .section-header h3 i {
+    color: #4CAF50;
+}
+
+#digital-security .section-header h3 i {
+    color: #2196F3;
+}
+
+#personal-security .section-header h3 i {
+    color: #FFC107;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .guide-container {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+    
+    .guide-header h1 {
+        font-size: 2rem;
+    }
+    
+    .guide-section {
+        padding: 1.2rem;
+    }
+    
+    .step {
+        padding: 1rem;
+    }
+    
+    .guide-footer {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .download-btn, .tts-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+} 

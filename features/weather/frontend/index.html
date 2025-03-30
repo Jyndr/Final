@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather & Disaster Alerts - ResQ</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Weather & Disaster Alerts</h1>
+        
+        <div class="search-section">
+            <div class="search-container">
+                <div class="search-input">
+                    <i class="fas fa-location-dot location-icon"></i>
+                    <input type="text" id="location-input" placeholder="Enter your location...">
+                </div>
+                <button class="update-btn" id="update-alerts">Update Alerts</button>
+            </div>
+        </div>
+
+        <div class="alerts-grid">
+            <!-- Rainfall Alert -->
+            <div class="alert-card rainfall">
+                <div class="alert-icon">
+                    <i class="fas fa-cloud-rain"></i>
+                </div>
+                <h3 class="alert-title">Heavy Rainfall Expected</h3>
+                <p class="alert-description">Heavy rainfall predicted in the next 24 hours. Please take necessary precautions.</p>
+                <div class="alert-meta">
+                    <span><i class="fas fa-location-dot"></i>Mumbai, Maharashtra</span>
+                    <span><i class="far fa-clock"></i>Next 24 hours</span>
+                </div>
+            </div>
+
+            <!-- Temperature Alert -->
+            <div class="alert-card temperature">
+                <div class="alert-icon">
+                    <i class="fas fa-temperature-high"></i>
+                </div>
+                <h3 class="alert-title">High Temperature Alert</h3>
+                <p class="alert-description">Temperature expected to reach 40°C. Stay hydrated and avoid outdoor activities.</p>
+                <div class="alert-meta">
+                    <span><i class="fas fa-location-dot"></i>Delhi, NCR</span>
+                    <span><i class="far fa-clock"></i>Today</span>
+                </div>
+            </div>
+
+            <!-- Wind Alert -->
+            <div class="alert-card wind">
+                <div class="alert-icon">
+                    <i class="fas fa-wind"></i>
+                </div>
+                <h3 class="alert-title">Strong Winds Warning</h3>
+                <p class="alert-description">Wind speeds may exceed 50 km/h. Secure loose objects and stay indoors.</p>
+                <div class="alert-meta">
+                    <span><i class="fas fa-location-dot"></i>Chennai, Tamilnadu</span>
+                    <span><i class="far fa-clock"></i>Tomorrow</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

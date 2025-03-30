@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - ResQ</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="logo">
+                <div class="logo-icon">⚡</div>
+                <h2>ResQ</h2>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li class="active" data-page="dashboard">
+                        <a href="#dashboard">
+                            <i class="fas fa-home"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li data-page="lost-found">
+                        <a href="#lost-found">
+                            <i class="fas fa-robot"></i>
+                            <span>Safety Assistant</span>
+                        </a>
+                    </li>
+                    <li data-page="weather">
+                        <a href="#weather">
+                            <i class="fas fa-cloud-sun-rain"></i>
+                            <span>Weather Alerts</span>
+                        </a>
+                    </li>
+                    <!-- <li data-page="first-aid">
+                        <a href="#first-aid">
+                            <i class="fas fa-first-aid"></i>
+                            <span>First Aid Guide</span>
+                        </a>
+                    </li> -->
+                    <li data-page="sos">
+                        <a href="#sos">
+                            <i class="fas fa-phone-alt"></i>
+                            <span>Emergency SOS</span>
+                        </a>
+                    </li>
+                    <li data-page="insurance">
+                        <a href="#insurance">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Insurance</span>
+                        </a>
+                    </li>
+                    <li data-page="shop">
+                        <a href="#shop">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>Emergency Shop</span>
+                        </a>
+                    </li>
+                    <li data-page="security-guide">
+                        <a href="#security-guide">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Security Guide</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <button class="logout-btn">
+                <i class="fas fa-sign-out-alt"></i>
+                <a href="index.html"><span>Log Out</span></a>
+            </button>
+        </aside>
+
+        <main class="main-content">
+            <div id="content-area">
+                <!-- Content will be dynamically loaded here -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Load required libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("jZf4ctVqYnFjd-Kfm");
+        })();
+    </script>
+    
+    <!-- Load main application script as a module -->
+    <script type="module" src="js/dashboard.js"></script>
+</body>
+</html> 

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Aid & Survival Guide - Disaster Management</title>
+    <link rel="stylesheet" href="first-aid.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-first-aid"></i> First Aid & Survival Guide</h1>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search for emergency procedures...">
+                <button id="searchBtn"><i class="fas fa-search"></i></button>
+            </div>
+        </header>
+
+        <main>
+            <div class="guide-container">
+                <!-- Earthquake Section -->
+                <div class="guide-section" data-category="earthquake">
+                    <div class="section-header">
+                        <i class="fas fa-mountain"></i>
+                        <h2>Earthquake</h2>
+                        <button class="toggle-btn"><i class="fas fa-chevron-down"></i></button>
+                    </div>
+                    <div class="section-content">
+                        <div class="steps">
+                            <div class="step">
+                                <span class="step-number">1</span>
+                                <p>Drop, Cover, and Hold On: Get under a sturdy table or desk and hold on.</p>
+                            </div>
+                            <div class="step">
+                                <span class="step-number">2</span>
+                                <p>Stay indoors until the shaking stops and it's safe to exit.</p>
+                            </div>
+                            <div class="step">
+                                <span class="step-number">3</span>
+                                <p>Check for injuries and provide first aid if necessary.</p>
+                            </div>
+                            <div class="step">
+                                <span class="step-number">4</span>
+                                <p>Be prepared for aftershocks.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Flood Section -->
+                <div class="guide-section" data-category="flood">
+                    <div class="section-header">
+                        <i class="fas fa-water"></i>
+                        <h2>Flood</h2>
+                        <button class="toggle-btn"><i class="fas fa-chevron-down"></i></button>
+                    </div>
+                    <div class="section-content">
+                        <div class="steps">
+                            <div class="step">
+                                <span class="step-number">1</span>
+                                <p>Move to higher ground immediately.</p>
+                            </div>
+                            <div class="step">
+                                <span class="step-number">2</span>
+                                <p>Do not walk through moving water.</p>
+                            </div>
+                            <div class="step">
+                                <span class="step-number">3</span>
+                                <p>Turn off utilities if instructed to do so.</p>
+                            </div>
+                            <div class="step">
+                                <span class="step-number">4</span>
+                                <p>Stay tuned to emergency broadcasts.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fire Section -->
+                <div class="guide-section" data-category="fire">
+                    <div class="section-header">
+                        <i class="fas fa-fire"></i>
+                        <h2>Fire</h2>
+                        <button class="toggle-btn"><i class="fas fa-chevron-down"></i></button>
+                    </div>
+                    <div class="section-content">
+                        <div class="steps">
+                            <div class="step">
+                                <span class="step-number">1</span>
+                                <p>Get out, stay out, and call emergency services.</p>
+                            </div>
+                            <div class="step">
+                                <span class="step-number">2</span>
+                                <p>Stay low to avoid smoke inhalation.</p>
+                            </div>
+                            <div class="step">
+                                <span class="step-number">3</span>
+                                <p>Use stairs, not elevators.</p>
+                            </div>
+                            <div class="step">
+                                <span class="step-number">4</span>
+                                <p>Stop, drop, and roll if clothes catch fire.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hurricane Section -->
+                <div class="guide-section" data-category="hurricane">
+                    <div class="section-header">
+                        <i class="fas fa-hurricane"></i>
+                        <h2>Hurricane</h2>
+                        <button class="toggle-btn"><i class="fas fa-chevron-down"></i></button>
+                    </div>
+                    <div class="section-content">
+                        <div class="steps">
+                            <div class="step">
+                                <span class="step-number">1</span>
+                                <p>Secure your home and gather emergency supplies.</p>
+                            </div>
+                            <div class="step">
+                                <span class="step-number">2</span>
+                                <p>Stay indoors during the storm.</p>
+                            </div>
+                            <div class="step">
+                                <span class="step-number">3</span>
+                                <p>Keep away from windows and doors.</p>
+                            </div>
+                            <div class="step">
+                                <span class="step-number">4</span>
+                                <p>Be prepared for power outages.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Medical Emergency Section -->
+                <div class="guide-section" data-category="medical">
+                    <div class="section-header">
+                        <i class="fas fa-heartbeat"></i>
+                        <h2>Medical Emergency</h2>
+                        <button class="toggle-btn"><i class="fas fa-chevron-down"></i></button>
+                    </div>
+                    <div class="section-content">
+                        <div class="steps">
+                            <div class="step">
+                                <span class="step-number">1</span>
+                                <p>Check if the person is conscious and breathing.</p>
+                            </div>
+                            <div class="step">
+                                <span class="step-number">2</span>
+                                <p>Call emergency services immediately.</p>
+                            </div>
+                            <div class="step">
+                                <span class="step-number">3</span>
+                                <p>Begin CPR if necessary and trained to do so.</p>
+                            </div>
+                            <div class="step">
+                                <span class="step-number">4</span>
+                                <p>Stay with the person until help arrives.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <button id="downloadPDF" class="download-btn">
+                <i class="fas fa-download"></i> Download Guide
+            </button>
+            <button id="textToSpeech" class="tts-btn">
+                <i class="fas fa-volume-up"></i> Read Aloud
+            </button>
+        </footer>
+    </div>
+    <script src="first-aid.js"></script>
+</body>
+</html> 

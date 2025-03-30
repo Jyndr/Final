@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comprehensive guide for handling top 20 disasters with effective remedies and safety measures">
+    <title>Disasters and Their Remedies | Emergency Guide</title>
+    <link rel="stylesheet" href="security_guide.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Top Disasters and Their Remedies</h1>
+        <p class="subtitle">Essential guide for emergency preparedness and response</p>
+    </header>
+
+    <main>
+        <div class="filter-container">
+            <div class="filter-group">
+                <label for="disasterType" class="filter-label">
+                    <i class="fas fa-filter"></i> Disaster Type
+                </label>
+                <select id="disasterType" class="filter-select">
+                    <option value="all">All Disasters</option>
+                    <option value="natural">Natural Disasters</option>
+                    <option value="human">Human-Made Disasters</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="severity" class="filter-label">
+                    <i class="fas fa-exclamation-triangle"></i> Severity Level
+                </label>
+                <select id="severity" class="filter-select">
+                    <option value="all">All Severities</option>
+                    <option value="high">High Severity</option>
+                    <option value="medium">Medium Severity</option>
+                    <option value="low">Low Severity</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="cards-container" id="cardsContainer">
+            <!-- Cards will be dynamically populated by JavaScript -->
+        </div>
+    </main>
+
+    <footer>
+        <p>Emergency Preparedness Guide | Stay Safe, Stay Informed</p>
+    </footer>
+
+    <script src="security_guide.js"></script>
+</body>
+</html> 
