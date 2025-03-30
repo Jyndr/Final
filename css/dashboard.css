@@ -2932,3 +2932,83 @@ body.menu-open {
         bottom: 20px;
     }
 }
+
+/* Security Guide Styles */
+.security-guide {
+    padding: 2rem;
+}
+
+.security-guide h1 {
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.filters {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    justify-content: center;
+}
+
+.filters select,
+.filters input {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    min-width: 200px;
+}
+
+.security-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.security-card {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease;
+}
+
+.security-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.security-card h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.security-card p {
+    color: #666;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.learn-more {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.learn-more:hover {
+    background: #2980b9;
+}
