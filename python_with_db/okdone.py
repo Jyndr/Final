@@ -29,7 +29,7 @@ def install_torch():
 def install_packages():
    
     try:
-        # First install PyTorch
+        
         if not install_torch():
             print("Failed to install PyTorch. Please install it manually from https://pytorch.org/")
             sys.exit(1)
